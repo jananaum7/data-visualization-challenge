@@ -23,6 +23,7 @@ ylabel='Count',
 ) 
 plt.axis('equal') 
 plt.show() 
+
 2. The code generates a pie chart showing the distribution of male versus female mice in 
 the study. It counts the unique mice by gender, revealing that males make up 50.6% of the 
 total and females make up 49.4%. This indicates a nearly equal representation of both 
