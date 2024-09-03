@@ -1,7 +1,5 @@
 # Pymaceuticals Inc. --- 
 ### Analysis 
-# Generate a bar plot showing the total number of rows (Mouse ID/Timepoints) for each 
-drug regimen using Pandas. 
 mouse_id_timepoint = clean_df["Drug Regimen"].value_counts() 
 mouse_id_timepoint.plot(kind="bar", figsize=(6.5,4.5), color='steelblue') 
 plt.xlabel("Drug Regimen") 
@@ -16,27 +14,21 @@ have the highest number of observations, indicating that these drug regimens wer
 administered to the most mice or were recorded the most frequently in the dataset. This 
 suggests a higher level of data collection or interest in these treatments. 
 ____________________________________________________________________________________ 
-# Generate a pie chart, using Pandas, showing the distribution of unique female versus 
-male mice used in the study 
-# Get the unique mice with their gender 
 gender = clean_df['Sex'].value_counts() 
-# Make the pie chart 
 gender.plot.pie( 
 autopct='%1.1f%%',  
 colors=['steelblue', 'darkorange'],  
 startangle=0, 
 ylabel='Count',   
 ) 
-# Ensure the pie chart is a circle 
 plt.axis('equal') 
-# Show the plot 
 plt.show() 
 2. The code generates a pie chart showing the distribution of male versus female mice in 
 the study. It counts the unique mice by gender, revealing that males make up 50.6% of the 
 total and females make up 49.4%. This indicates a nearly equal representation of both 
 genders in the study. 
 ____________________________________________________________________________________ 
-#cor_coe = st.pearsonr(avg_tumor_volume['Weight (g)'],  
+cor_coe = st.pearsonr(avg_tumor_volume['Weight (g)'],  
 avg_tumor_volume ['Tumor Volume (mm3)'])[0] 
   
 print(f"The correlation coefficient between mouse weight and average weight tumor 
